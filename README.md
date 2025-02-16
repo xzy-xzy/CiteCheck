@@ -7,7 +7,7 @@ The dataset is available as `*.jsonl` files in `dataset`. The key-value pairs in
 - `query`: `str`. Questions input to the RAG system.
 - `answer`: `str`. The answer given by the RAG system.
 - `statement`: `str`. A citation-marked statement taken from the answer.
-- `quote`: `str`. The cited documents (indicated by the statement's citation marks).
+- `quote`: `str`. The cited documents retrieved by the RAG system (indicated by the statement's citation marks).
 - `label`: `int`. The value `0` indicates a negative sample and `1` indicates a positive sample.
 - `method`: `str`. The value `none` indicates the original sample, `ch` indicates the augmented sample with information changed, and `del` indicates the augmented sample with information deleted.
 
