@@ -16,7 +16,7 @@ Complete LLM Augmentation traces are available at [this link](https://drive.goog
 ## Code
 Start with `cd code`. 
 
-For zero-shot experiments on LLM:
+For zero-shot experiments on LLMs:
 ```
 python3 run_api.py --model [model] --api_key [api_key]
 ```
