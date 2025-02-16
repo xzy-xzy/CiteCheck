@@ -13,3 +13,22 @@ The dataset is available as `*.jsonl` files in `dataset`. The key-value pairs in
 
 Complete LLM Augmentation traces are available at [this link](https://drive.google.com/file/d/1tqssEs_o1VZTabXKfnwilHvp1td0x9O3/view?usp=share_link).
 
+## Code
+Start with `cd code`. 
+
+For zero-shot experiments on LLM:
+```
+python3 run_api.py --model [model] --api_key [api_key]
+```
+You can specify the base_url for platforms other than OpenAI with `--base_url [base_url]` and test on the dev set with `--aim dev`. For LLMs that support the batch API, you can use `run_api_batch.py` instead of `run_api.py`.
+
+For fine-tuning experiments on models (from HuggingFace):
+```
+accelerate launch --config_file config_lora.yaml fine-tuning.py --model [model]
+```
+You can also specify a local model. For example, if the model is stored in `../cache/Llama-3.1-8B-Instruct`:
+```
+accelerate launch --config_file config_lora.yaml fine-tuning.py --model Llama-3.1-8B-Instruct --loc ../cache/
+```
+
+
